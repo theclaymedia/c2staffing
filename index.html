@@ -30,8 +30,18 @@
   <style>
     html { scroll-behavior: smooth; }
     .hero-overlay { background: linear-gradient(135deg, rgba(26,39,68,0.85) 0%, rgba(26,39,68,0.6) 100%); }
-    .job-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+    .job-card:hover { transform: translateY(-6px) scale(1.04); box-shadow: 0 16px 40px rgba(0,0,0,0.18); background-color: #1a2744; border-color: #1a2744; }
+    .job-card:hover h4 { color: white; }
+    .job-card:hover p, .job-card:hover span:not(.text-gold):not([class*="bg-"]) { color: rgba(255,255,255,0.75); }
+    .job-card:hover .text-navy { color: white; }
+    .job-card:hover .text-gray-400, .job-card:hover .text-gray-500 { color: rgba(255,255,255,0.6); }
+    .job-card:hover .bg-gray-100 { background-color: rgba(255,255,255,0.1); }
+    .job-card:hover .border-gray-100 { border-color: rgba(255,255,255,0.15); }
+    .job-card:hover .text-gold { color: #e0bc65; }
     .job-card { transition: all 0.3s cubic-bezier(0.4,0,0.2,1); }
+    .job-card h4, .job-card p, .job-card span { transition: color 0.3s ease; }
+    .job-card .bg-gray-100 { transition: background-color 0.3s ease; }
+    .job-card .border-gray-100 { transition: border-color 0.3s ease; }
     .tab-active { background-color: #1a2744; color: white; }
     .toggle-active { background-color: #1a2744; color: white; }
     .stat-card { backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); }
